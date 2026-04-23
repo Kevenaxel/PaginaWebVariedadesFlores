@@ -4,8 +4,8 @@ const LOGO = '/logo.png'
 
 const SERVICES = [
   { icon: '🛒', title: 'Tienda de Consumo', desc: 'Alimentos, bebidas, limpieza e higiene. Todo lo que tu hogar necesita a los mejores precios.', tag: 'Abierto todos los días' },
-  { icon: '💸', title: 'Remesas Promerica', desc: 'Agente autorizado Banco Promerica. Recibí el dinero de tus familiares de forma rápida y segura.', tag: 'Solo tu DUI' },
-  { icon: '💸', title: 'Remesas y Pagos Tigo Money', desc: 'Agente autorizado Tigo Money. Recibí remesas, envía dinero y paga tus servicios fácil, rápido y seguro.', tag: 'Solo tu DUI' },
+  { icon: '💸', title: 'Remesas Promerica', desc: 'Agente autorizado Banco Promerica. Recibí el dinero de tus familiares de forma rápida y segura.', tag: 'Solo tu DUI y Clave' },
+  { icon: '💸', title: 'Remesas y Pagos Tigo Money', desc: 'Agente autorizado Tigo Money. Recibí remesas, envía dinero y paga tus servicios fácil, rápido y seguro.', tag: 'Solo tu DUI y Clave' },
   { icon: '👗', title: 'Venta de Ropa', desc: 'Moda accesible para damas, caballeros y niños. Calidad y estilo para toda la familia.', tag: 'Toda la familia' },
   { icon: '📱', title: 'Celulares & Tech', desc: 'Celulares, bocinas bluetooth, auriculares y accesorios. Tecnología al alcance de todos.', tag: 'Tech accesible' },
 ]
