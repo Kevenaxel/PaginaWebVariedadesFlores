@@ -9,7 +9,7 @@ const SERVICES = [
   { icon: '👗', title: 'Venta de Ropa', desc: 'Moda accesible para damas, caballeros y niños. Calidad y estilo para toda la familia.', tag: 'Toda la familia' },
   { icon: '📱', title: 'Celulares & Tech', desc: 'Celulares, bocinas bluetooth, auriculares y accesorios. Tecnología al alcance de todos.', tag: 'Tech accesible' },
 ]
-
+/*
 const CONSUMO = [
   { cat: 'Producto Basico', emoji: '🌾', color: '#fbbf24', items: ['Arroz Precocido', 'Arroz 5 Estrellas', 'Azúcar Normal', 'Azúcar Morena', 'Frijoles', 'Sal'] },
   { cat: 'Aceites', emoji: '🫙', color: '#fb923c', items: ['Aceite Capullo', 'Aceite Orisol', 'Aceite Dorado'] },
@@ -18,6 +18,7 @@ const CONSUMO = [
   { cat: 'Higiene Personal', emoji: '🧴', color: '#f472b6', items: ['Desodorantes', 'Lociones', 'Jabones de baño'] },
   { cat: 'Tecnología', emoji: '📱', color: '#34d399', items: ['Celulares', 'Bocinas Bluetooth', 'Audífonos', 'Cargadores', 'Cables USB'] },
 ]
+  */
 
 const CLOTHES = [
   { icon: '👔', label: 'Caballeros', desc: 'Camisas, pantalones, casual' },
