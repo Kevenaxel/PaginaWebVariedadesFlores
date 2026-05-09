@@ -5,11 +5,12 @@ const LOGO = '/logo.png'
 const SERVICES = [
   { icon: '🛒', title: 'Tienda de Consumo', desc: 'Alimentos, bebidas, limpieza e higiene. Todo lo que tu hogar necesita a los mejores precios.', tag: 'Abierto todos los días' },
   { icon: '💸', title: 'Remesas Promerica', desc: 'Agente autorizado Banco Promerica. Recibí el dinero de tus familiares de forma rápida y segura.', tag: 'Solo tu DUI y Clave' },
-  { icon: '💸', title: 'Remesas y Pagos Tigo Money', desc: 'Agente autorizado Tigo Money. Recibí remesas, envía dinero y paga tus servicios fácil, rápido y seguro.', tag: 'Solo tu DUI y Clave' },
+   { icon: '💸', title: 'Remesas Agricola', desc: 'Agente autorizado Banco Promerica. Recibí el dinero de tus familiares de forma rápida y segura.', tag: 'Solo tu DUI y Clave' },
+  { icon: '💸', title: 'Pagos Tigo Money', desc: 'Agente autorizado Tigo Money. Paga tus servicios fácil, rápido y seguro.', tag: 'Solo tu DUI y Clave' },
   { icon: '👗', title: 'Venta de Ropa', desc: 'Moda accesible para damas, caballeros y niños. Calidad y estilo para toda la familia.', tag: 'Toda la familia' },
   { icon: '📱', title: 'Celulares & Tech', desc: 'Celulares, bocinas bluetooth, auriculares y accesorios. Tecnología al alcance de todos.', tag: 'Tech accesible' },
 ]
-/*
+
 const CONSUMO = [
   { cat: 'Producto Basico', emoji: '🌾', color: '#fbbf24', items: ['Arroz Precocido', 'Arroz 5 Estrellas', 'Azúcar Normal', 'Azúcar Morena', 'Frijoles', 'Sal'] },
   { cat: 'Aceites', emoji: '🫙', color: '#fb923c', items: ['Aceite Capullo', 'Aceite Orisol', 'Aceite Dorado'] },
@@ -18,7 +19,7 @@ const CONSUMO = [
   { cat: 'Higiene Personal', emoji: '🧴', color: '#f472b6', items: ['Desodorantes', 'Lociones', 'Jabones de baño'] },
   { cat: 'Tecnología', emoji: '📱', color: '#34d399', items: ['Celulares', 'Bocinas Bluetooth', 'Audífonos', 'Cargadores', 'Cables USB'] },
 ]
-  */
+  
 
 const CLOTHES = [
   { icon: '👔', label: 'Caballeros', desc: 'Camisas, pantalones, casual' },
@@ -375,6 +376,37 @@ export default function App() {
         </div>
       </section>
 
+       {/* ── REMESAS AGRICOLA ── */}
+      <section id="remesas" className="section" style={{ background: '#0a0a5e', position: 'relative', overflow: 'hidden' }}>
+        <div className="orb" style={{ width: 500, height: 500, background: 'radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%)', top: '-20%', right: '-10%' }} />
+        <div style={{ maxWidth: 1140, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="rem-cols" style={{ display: 'flex', alignItems: 'center', gap: 70 }}>
+            <Reveal delay={0.05} y={0} style={{ flexShrink: 0 }}>
+              <div style={{ width: 160, height: 160, borderRadius: 32, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4.5rem' }}>🏦</div>
+            </Reveal>
+            <div style={{ flex: 1 }}>
+              <Reveal>
+                <div className="pill" style={{ marginBottom: 20 }}>✅ Agente Autorizado · Banco Agricola</div>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <h2 className="sh" style={{ marginBottom: 16 }}>Recibí tus remesas<br /><span style={{ color: '#fbbf24' }}>con Agricola</span></h2>
+              </Reveal>
+              <Reveal delay={0.14}>
+                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', lineHeight: 1.75, maxWidth: 500, marginBottom: 28 }}>
+                  Recibí el dinero que te mandan tus familiares desde EE.UU. de forma rápida y segura. <strong style={{ color: '#fff' }}>Solo presentá tu DUI y Clave y listo.</strong>
+                </p>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <div className="rem-btns" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+                  <a href="tel:+50372121235" className="btn-gold">📞 7212-1235</a>
+                  <a href="https://wa.me/50372121235" target="_blank" rel="noreferrer" className="btn-wa">💬 WhatsApp</a>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
       
       {/* ── REMESAS Y PAGO DE SERVICIO TIGO MONEY ── */}
       <section id="remesas" className="section" style={{ background: '#0a0a5e', position: 'relative', overflow: 'hidden' }}>
@@ -389,11 +421,11 @@ export default function App() {
                 <div className="pill" style={{ marginBottom: 20 }}>✅ Agente Autorizado · Tigo Money</div>
               </Reveal>
               <Reveal delay={0.08}>
-                <h2 className="sh" style={{ marginBottom: 16 }}>Recibí tus remesas<br /><span style={{ color: '#fbbf24' }}>con Promerica</span></h2>
+                <h2 className="sh" style={{ marginBottom: 16 }}>Pagos de Recibos<br /><span style={{ color: '#fbbf24' }}>con TigoMoney</span></h2>
               </Reveal>
               <Reveal delay={0.14}>
                 <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', lineHeight: 1.75, maxWidth: 500, marginBottom: 28 }}>
-                  Recibí el dinero que te envían tus familiares desde EE.UU. y paga tus servicios de forma rápida y segura. <strong style={{ color: '#fff' }}>Solo presentá tu DUI y Clave y listo.</strong>
+                  Paga tus recibos de forma rápida, segura y sin hacer filas con . Realiza pagos de luz, agua, telefonía y más directamente desde tu celular o en puntos autorizados. <strong style={{ color: '#fff' }}>Solo presentá tu recibo y listo.</strong>
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
