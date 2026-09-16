@@ -203,7 +203,7 @@ export default function App() {
 
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1140px; margin: 0 auto; }
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 1140px; margin: 0 auto; }
-        .grid-products { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; max-width: 1140px; margin: 0 auto; }
+        .grid-products { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; max-width: 1140px; margin: 0 auto; }
 
         .section { padding: 96px 5%; position: relative; }
         .sh { font-family: 'Outfit', sans-serif; font-size: clamp(2.1rem, 4.5vw, 3.2rem); font-weight: 800; line-height: 1.15; }
@@ -236,6 +236,7 @@ export default function App() {
           .section { padding: 75px 5%; }
           .orb-widget { display: none !important; }
           .nav-logo img { width: 160px !important; height: 44px !important; }
+          .grid-products { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important; gap: 14px !important; }
         }
         @media (min-width: 769px) {
           .mbtn { display: none !important; }
@@ -391,9 +392,46 @@ export default function App() {
             <div className="grid-products">
               {productosFiltrados.map((prod) => (
                 <div key={prod.id} className="product-card">
-                  <div style={{ width: '100%', height: 180, borderRadius: 14, overflow: 'hidden', marginBottom: 14, background: '#050549', position: 'relative' }}>
-                    <img src={prod.imagen} alt={prod.nombre} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <span style={{ position: 'absolute', top: 10, left: 10, background: 'rgba(5,5,73,0.85)', backdropFilter: 'blur(6px)', padding: '3px 10px', borderRadius: 8, fontSize: '0.7rem', fontWeight: 700, color: '#fbbf24', textTransform: 'uppercase' }}>
+                  <div style={{
+                    width: '100%',
+                    height: 250,
+                    minHeight: 220,
+                    borderRadius: 16,
+                    overflow: 'hidden',
+                    marginBottom: 14,
+                    background: '#ffffff',
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: 10
+                  }}>
+                    <img
+                      src={prod.imagen}
+                      alt={prod.nombre}
+                      loading="lazy"
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                        borderRadius: 14
+                      }}
+                    />
+                    <span style={{
+                      position: 'absolute',
+                      top: 10,
+                      left: 10,
+                      background: 'rgba(5,5,73,0.88)',
+                      backdropFilter: 'blur(6px)',
+                      padding: '4px 10px',
+                      borderRadius: 8,
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      color: '#fbbf24',
+                      textTransform: 'uppercase'
+                    }}>
                       {prod.categoria}
                     </span>
                   </div>
@@ -402,7 +440,7 @@ export default function App() {
                     <h3 className="title-font" style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: 8, color: '#fff', minHeight: 46 }}>
                       {prod.nombre}
                     </h3>
-                    <div className="title-font" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fbbf24', marginBottom: 16 }}>
+                    <div className="title-font" style={{ fontSize: '1.45rem', fontWeight: 800, color: '#fbbf24', marginBottom: 16 }}>
                       {prod.precio}
                     </div>
                   </div>
